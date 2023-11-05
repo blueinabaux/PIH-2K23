@@ -1,36 +1,3 @@
-function init(){
-    gsap.registerPlugin(ScrollTrigger);
-
-    const locoScroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true
-    });
-
-    locoScroll.on("scroll", ScrollTrigger.update);
-
-    ScrollTrigger.scrollerProxy("#main", {
-    scrollTop(value) {
-        return arguments.length ? locoScroll.scrollTo(value, {duration: 0, disableLerp: true}) : locoScroll.scroll.instance.scroll.y;
-    }, 
-    getBoundingClientRect() {
-        return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-    },
-
-    pinType: document.querySelector("#main").style.transform ? "transform" : "fixed",    
-    });
-
-    // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-    ScrollTrigger.defaults({ scroller: "#main" });
-    // --- SETUP END ---
-
-    // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-    ScrollTrigger.refresh();
-    
-}
-
-
-
 
 gsap.to("#nav",{
     backdropFilter: "blur(10px)",
