@@ -1,3 +1,23 @@
+let navLinks  = document.querySelector(".nav-resp");
+let btn = document.querySelector(".nav-toggle");
+
+let flag = 0;
+
+
+btn.addEventListener("click",function(){
+
+    if(flag == 0){
+        
+        navLinks.style.right = 0;
+        flag = 1;
+    }
+    else{
+        navLinks.style.right = "100%";
+        flag = 0;
+    }
+    
+})
+
 
 gsap.to("#nav",{
     backdropFilter: "blur(10px)",
@@ -31,18 +51,58 @@ gsap.to("#main",{
     
 })
 
+let t1 = gsap.timeline()
+t1
+    .from("#nav .nav-left img",{
+        y:-100,
+        duration:1.5,
+        delay:0.5,
+        opacity:0,
+        
+    })
+    .from("#nav .nav-left a",{
+        y:-100,
+        duration:0.5,
+        delay:0.5,
+        opacity:0,
+        stagger:0.2
+        
+    })
+    .from("#nav .nav-right a",{
+        y:-100,
+        // duration:1,
+        delay:0,
+        opacity:0,
+        stagger:0.2
+
+        
+    })
+
+
 
 let a = gsap.timeline();
 a
- .from("#main #page1 h1",{
+    .from("#main #page1 h1",{
         y:50,
-        duration:3,
+        duration:1,
         opacity:0,
     })
-    .to("#main #page1 h1",{
-        y:0,
-        opacity:1
+    // .to("#main #page1 h1",{
+    //     y:0,
+    //     opacity:1
+    // })
+    .from("#main #page1 h2",{
+        y:50,
+        duration:2,
+        opacity:0,
     })
+
+    .from("#main #page1 p",{
+        y:50,
+        duration:2,
+        opacity:0,
+    })
+
 
 gsap.from("#page2 .card",{
     scale:0.8,

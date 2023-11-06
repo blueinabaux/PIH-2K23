@@ -3,28 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="style_main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <title>Document</title>
+    <title>PROTOTYPE</title>
 </head>
 <body>
+
+    <!-- MAIN NAVBAR -->
     <div id="nav">
         <div class="nav-left">
             <img src="images/logo without bg.png" alt="INDIA">
-            <h4>Explore</h4>
-            <h4>Tours</h4>
-            <h4>Travels</h4>
-            <h4>About Us</h4>
-            <h4>Contact</h4>
+            <a href=""><h4>Explore</h4></a>
+            <a href=""><h4>Tours</h4></a>
+            <a href=""><h4>Travels</h4></a>
+            <a href="/PROTOTYPE/About Us/about.html"><h4>About Us</h4></a>
+            <a href=""><h4>Contact</h4></a>
+            
         </div>
         <div class="nav-right">
             <a href="/PROTOTYPE/Login/login.html"><h4>Login</h4></a>
             <a href="#"><h4>Register</h4></a>
         </div>
+        <i class="ri-menu-line"></i>
     </div>
+
+    <!-- MOBILE NAVBAR -->
+
+    <div class="mobile-nav">
+        <img src="images/logo without bg.png" alt="INDIA">
+        <div class="nav-resp" id="nav-resp">
+            <a href=""><h4>Explore</h4></a>
+            <a href=""><h4>Tours</h4></a>
+            <a href=""><h4>Travels</h4></a>
+            <a href="/PROTOTYPE/About Us/about.html"><h4>About Us</h4></a>
+            <a href=""><h4>Contact</h4></a>
+            <a href="/PROTOTYPE/Login/login.html"><h4>Login</h4></a>
+            <a href="#"><h4>Register</h4></a>
+            
+        </div>
+        <a href="#" class="nav-toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+        </a>
+    </div>
+
+    <!-- END -->
+
 
     <video autoplay loop muted src="images/travel video.mp4" ></video>
 
@@ -64,19 +90,19 @@
                 <h1>OUR INDIA</h1>
             </div>
             <div id="card-container">
-                <div class="card-1" id="card1">
+                <div class="card-1" id="card4">
                     <div class="overlay">
                         <h4>FOOD</h4>
                         <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can.</p>
                     </div>
                 </div>
-                <div class="card-1" id="card2">
+                <div class="card-1" id="card5">
                     <div class="overlay">
                         <h4>CULTURE</h4>
                         <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can.</p>
                     </div>
                 </div>
-                <div class="card-1" id="card3">
+                <div class="card-1" id="card6">
                     <div class="overlay">
                         <h4>FESTIVALS</h4>
                         <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can. </p>
@@ -94,36 +120,42 @@
                     <a href=""><img src="icons/linkedin.png" alt=""></a>
                 </div>
             </div>
-            <div class="col-1">
-                <h2>Quick Links</h2>
-                <div class="links">
-                    <a href=""><h4>Home</h4></a>
-                    <a href=""><h4>Destinations</h4></a>
-                    <a href=""><h4>About Us</h4></a>
-                    <a href=""><h4>Blog</h4></a>
+           <div class="foot-links">
+                <div class="col-1">
+                    <h2>Quick Links</h2>
+                    <div class="links">
+                        <a href=""><h4>Home</h4></a>
+                        <a href=""><h4>Destinations</h4></a>
+                        <a href=""><h4>About Us</h4></a>
+                        <a href=""><h4>Blog</h4></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-1">
-                <h2>Something</h2>
-                <div class="links">
-                    <a href=""><h4>Sample</h4></a>
-                    <a href=""><h4>Sample</h4></a>
-                    <a href=""><h4>Sample</h4></a>
-                    <a href=""><h4>Sample</h4></a>
+                <div class="col-2">
+                    <h2>Our Company</h2>
+                    <div class="links">
+                        <a href=""><h4>Team</h4></a>
+                        <a href=""><h4>Sample</h4></a>
+                        <a href=""><h4>Sample</h4></a>
+                        <a href=""><h4>Sample</h4></a>
+                    </div>
+
                 </div>
+                <div class="col-3">
+                    <h2>Resources</h2>
+                    <div class="links">
+                        <a href=""><h4>Categories</h4></a>
+                        <a href=""><h4>City Guides</h4></a>
+                        <a href=""><h4>Travel Resources</h4></a>
+                        <a href=""><h4>Sample</h4></a>
 
-            </div>
-            <div class="col-1">
-                <h2>Something</h2>
-                <div class="links">
-                    <a href=""><h4>Sample</h4></a>
-                    <a href=""><h4>Sample</h4></a>
-                    <a href=""><h4>Sample</h4></a>
-                    <a href=""><h4>Sample</h4></a>
+                    </div>
+
                 </div>
-
-            </div>
-
+                <div class="back">
+                    <a href="#"><i class="ri-arrow-up-fill"></i></a>
+                </div>
+           </div>
+           
         </div>
     </div>
 
@@ -132,10 +164,10 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     
     <script src="script_main.js"></script>
+
 </body>
 </html>
