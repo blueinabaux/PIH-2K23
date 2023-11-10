@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&family=Poppins&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <title>PROTOTYPE</title>
+</head>
+<body>
+
+    <!-- MAIN NAVBAR -->
+    <div id="nav">
+        <div class="nav-left">
+            <img src="/static/img/logo without bg.png" alt="INDIA">
+            <a href=""><h4>Explore</h4></a>
+            <a href=""><h4>Tours</h4></a>
+            <a href=""><h4>Travels</h4></a>
+            <a href="{% url 'main-about' %}"><h4>About Us</h4></a>
+            <a href=""><h4>Contact</h4></a>
+            
+        </div>
+        <div class="nav-right">
+            {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}"><h4>Logout</h4></a>
+            {% else %}
+            <a href="{% url 'login' %}"><h4>Login</h4></a>
+            <a href="{% url 'register' %}"><h4>Register</h4></a>
+            {% endif %}
+        </div>
+        <i class="ri-menu-line"></i>
+    </div>
+
+    <!-- MOBILE NAVBAR -->
+
+    <div class="mobile-nav">
+        <img src="/static/img/logo without bg.png" alt="INDIA">
+        <div class="nav-resp" id="nav-resp">
+            <a href=""><h4>Explore</h4></a>
+            <a href=""><h4>Tours</h4></a>
+            <a href=""><h4>Travels</h4></a>
+            <a href="{% url 'main-about' %}"><h4>About Us</h4></a>
+            <a href=""><h4>Contact</h4></a>
+            <a href="{% url 'login' %}l"><h4>Login</h4></a>
+            <a href="#"><h4>Register</h4></a>
+            
+        </div>
+        <a href="#" class="nav-toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+        </a>
+    </div>
+
+    <!-- END -->
+
+
+    <video autoplay loop muted src="/static/video/travel video.mp4" ></video>
+
+    <div id="main">
+       
+        <div class="page" id="page1">
+            <h1>INDIA ODYSSEY</h1>
+            <h2>Your Journey, Your India</h2>
+            <p>Hello and Welcome to the official website of India Tourism</p>
+        </div>
+        <div class="page" id="page2">
+            <div class="services">
+                <h1>OUR SERVICES</h1>
+            </div>
+            <div id="card-container">
+                <div class="card" id="card1">
+                    <div class="overlay">
+                        <h4>TOURS</h4>
+                        <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can.</p>
+                    </div>
+                </div>
+                <div class="card" id="card2">
+                    <div class="overlay">
+                        <h4>TRAVELS</h4>
+                        <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can.</p>
+                    </div>
+                </div>
+                <div class="card" id="card3">
+                    <div class="overlay">
+                        <h4>PACKAGES</h4>
+                        <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="page" id="page3">
+            <div class="services-1">
+                <h1>OUR INDIA</h1>
+            </div>
+            <div id="card-container">
+                <div class="card-1" id="card4">
+                    <div class="overlay">
+                        <h4>FOOD</h4>
+                        <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can.</p>
+                    </div>
+                </div>
+                <div class="card-1" id="card5">
+                    <div class="overlay">
+                        <h4>CULTURE</h4>
+                        <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can.</p>
+                    </div>
+                </div>
+                <div class="card-1" id="card6">
+                    <div class="overlay">
+                        <h4>FESTIVALS</h4>
+                        <p>Here's the thing. She doesn't have anything to prove, but she is going to anyway. That's just her character. She knows she doesn't have to, but she still will just to show you that she can. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="image">
+                <img id="logo-img" src="/static/img/logo without bg.png" alt="">
+                <div class="icons">
+                    <a href="https://www.facebook.com/"><img src="/static/icons/facebook.png" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="/static/icons/instagram.png" alt=""></a>
+                    <a href="https://twitter.com/"><img src="/static/icons/twitter.png" alt=""></a>
+                    <a href=""><img src="/static/icons/linkedin.png" alt=""></a>
+                </div>
+            </div>
+           <div class="foot-links">
+                <div class="col-1">
+                    <h2>Quick Links</h2>
+                    <div class="links">
+                        <a href="{% url 'main-home' %}"><h4>Home</h4></a>
+                        <a href=""><h4>Destinations</h4></a>
+                        <a href="{% url 'main-about' %}"><h4>About Us</h4></a>
+                        <a href=""><h4>Blog</h4></a>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <h2>Our Company</h2>
+                    <div class="links">
+                        <a href=""><h4>Team</h4></a>
+                        <a href=""><h4>Sample</h4></a>
+                        <a href=""><h4>Sample</h4></a>
+                        <a href=""><h4>Sample</h4></a>
+                    </div>
+
+                </div>
+                <div class="col-3">
+                    <h2>Resources</h2>
+                    <div class="links">
+                        <a href=""><h4>Categories</h4></a>
+                        <a href=""><h4>City Guides</h4></a>
+                        <a href=""><h4>Travel Resources</h4></a>
+                        <a href=""><h4>Sample</h4></a>
+
+                    </div>
+
+                </div>
+                <div class="back">
+                    <a href="#"><i class="ri-arrow-up-fill"></i></a>
+                </div>
+           </div>
+           
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="/static/js/script.js"></script>
+
+</body>
+</html>
