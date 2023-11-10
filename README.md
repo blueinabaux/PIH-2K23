@@ -36,7 +36,13 @@ pip install crispy-bootstrap5
 ```bash
 pip install Pillow
 ```
-7. Execute the following commands :
+7. Install the django-tailwind package via pip :
+ 
+```bash
+python -m pip install django-tailwind
+```
+
+8. Execute the following commands :
 ```bash
 python manage.py makemigrations
 ```
@@ -49,29 +55,38 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-8. Open any Web Browser and type in the local url : http://127.0.0.1:8000/
+9. Open any Web Browser and type in the local url : http://127.0.0.1:8000/
 
-9. After this process you will be able to see the Homepage of our website.
+10. After this process you will be able to see the Homepage of our website.
 
-10. To view the Website on the mobile devices, open the <b>Command Prompt</b> and type <b>ipconfig</b> command.
+<b>NOTE : THE COMPUTER OR LAPTOP OR ANY LOCAL MACHINE SHOULD BE CONNECTED WITH THE SAME NETWORK AS THAT OF THE MOBILE DEVICE </b>
 
-11. After that find the IPv4 address and copy it.
+11. To view the Website on the mobile devices, open the <b>Command Prompt</b> and type <b>ipconfig</b> command.
 
-12. Go to the <b>settings.py</b> file in the PIH folder and line no. 28, there is <b>ALLOWED_HOST</b> written, in that paste the IPv4 address copied earlier in single quotes.
+12. After that find the IPv4 address and copy it.
+
+13. Go to the <b>settings.py</b> file in the PIH folder and line no. 28, there is <b>ALLOWED_HOST</b> written, in that paste the IPv4 address copied earlier in single quotes.
 
 ```bash
 ALLOWED_HOSTS = ['1.2.3.4']
 ```
 Here we assume that our IPv4 address is '1.2.3.4'
 
-13. After that save the file and run the server.
+14. After that save the file and run the server. Refer to the following command :
 
-14. Copy the IPv4 address, paste it in the url of any Web Browser on your mobile device followed by a colon (:) and after that paste the port number (it will be something like : 8000).
+```bash
+python manage.py runserver 1.2.3.4:8000
+```
+
+Now the Website will run on this address which will allow it to be viewed on the mobile devices.
+
+
+15. Copy the IPv4 address, paste it in the url of any Web Browser on your mobile device followed by a colon (:) and after that paste the port number (it will be something like : 8000).
 
  ```bash
 1.2.3.4:8000
 ```
 
-15. Now the Website will be visible on the Moblie device as well.
+16. Now the Website will be visible on the Moblie device as well.
 
 
