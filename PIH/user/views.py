@@ -12,13 +12,17 @@ def register(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
 
+        if password1 != password2:
+            return render(request, 'register.html')
+
+        if User.objects.filter(username=username).exists():
+            return render(request, 'register.html')
+
         user = User.objects.create_user(username=username, email=email, password=password1)
         user.save()
-        username = form.cleaned_data.get('username')
-        messages.success(request, f'Your account has been created! You are now able to log in')
         return redirect('login')
 
-    return render(request,'register.html')
+    return render(request, 'register.html')
 
 def login(request):
     if request.method == 'POST':
