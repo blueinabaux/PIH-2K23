@@ -12,53 +12,50 @@
     {% tailwind_css %}
 </head>
 
-<body>
-    <div >
-    <video src="/static/video/bg_video_register.mp4"  autoplay="{true}" loop muted class="fixed aspect-video w-full justify-center items-center min-w-full min-h-full max-w-none z-0"> 
-    </video>  
+<body class="bg-black">
+    <div>
+        <video src="{% static 'video/bg_video_register.mp4' %}" autoplay loop muted class="fixed aspect-video w-full h-full object-cover">
+        </video>
     </div>
-    <div class= " relative min-h-screen flex items-center justify-center">
+    <div class="relative min-h-screen flex items-center justify-center">
         <!-- login container -->
 
-        <div class="backdrop-blur-md absolute z-90  bg-white bg-opacity-50 border-solid border-gray-500 border-1 flex rounded-2xl shadow-lg max-w-4xl p-8 items-center ">
+        <div class="backdrop-blur-md absolute z-90 bg-white bg-opacity-50 border-solid border-gray-500 border-1 flex rounded-2xl shadow-lg max-w-4xl p-8 items-center w-full">
             <!-- form -->
             <div class="md:w-1/2 px-8 md:px-16">
                 <h2 class="font-bold mb-3 text-3xl text-blue-900 my-2">Register</h2>
                 <form action="" class="flex flex-col gap-4 justify-center items-center" method="POST">
                     {% csrf_token %}
-                    <input class="p-2 mt-2 rounded-xl border w-80" type="text" name="username" placeholder="Username">
-                    <input class="p-2 mt-1 rounded-xl border w-80 " type="email" name="email" placeholder="Email address">
+                    <input class="p-2 mt-2 rounded-xl border w-full md:w-80" type="text" name="username"
+                        placeholder="Username">
+                    <input class="p-2 mt-1 rounded-xl border w-full md:w-80" type="email" name="email"
+                        placeholder="Email address">
                     <div class="relative">
-                        <input class="p-2 my-2 rounded-xl border w-80" type="password" name="password1"
+                        <input class="p-2 my-2 rounded-xl border w-full md:w-80" type="password" name="password1"
                             placeholder="Password">
-                        <input class="p-2 mt-4 rounded-xl border w-80" type="password" name="password2"
+                        <input class="p-2 mt-4 rounded-xl border w-full md:w-80" type="password" name="password2"
                             placeholder="Confirm Password">
                         <!-- eye -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="gray"
-                            class="bi bi-eye absolute top-1/4  right-3 -translate-y-1/2" viewBox="0 0 16 16">
+                            class="bi bi-eye absolute top-1/4 right-3 -translate-y-1/2" viewBox="0 0 16 16">
                             <path
                                 d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z" />
                             <path
                                 d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z" />
                         </svg>
                     </div>
-                    <button class=" rounded-xl text-black bg-white border py-2 hover:scale-105 duration-300 w-32 ">Register</button>
+                    <button
+                        class="rounded-xl text-black bg-white border py-2 hover:scale-105 duration-300 w-full md:w-32">Register</button>
                 </form>
-                
-                <div class=" border-b border-blue-900 py-4 text-blue-900 "></div>
 
-                <div class="mt-4 text-xs flex justify-between items-center  text-blue-900">
-                    <p class="hover:underline font-semibold" >Already have an account?</p>
-                    <a href="{% url 'login' %}" class="py-2 px-5 bg-white border rounded-xl font-semibold hover:scale-110 duration-300 text-black">Login</a>
+                <div class="border-b border-blue-900 py-4 text-blue-900"></div>
+
+                <div class="mt-4 text-xs flex justify-between items-center text-blue-900">
+                    <p class="hover:underline font-semibold">Already have an account?</p>
+                    <a href="{% url 'login' %}"
+                        class="py-2 px-5 bg-white border rounded-xl font-semibold hover:scale-110 duration-300 text-black">Login</a>
                 </div>
             </div>
-            
-            <!-- image -->
-            <div class="sm:block hidden w-1/2">
-                <img class="rounded-2xl"
-                    src="/static/img/india map.jpeg">
-            </div>
-            
         </div>
     </div>
 </body>
